@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Brand:</strong>
+  <%= @boot.brand %>
+</p>
+
+<p>
+  <strong>Model:</strong>
+  <%= @boot.model %>
+</p>
+
+<p>
+  <strong>Cost:</strong>
+  <%= @boot.cost %>
+</p>
+
+<%= link_to 'Edit', edit_boot_path(@boot) %> |
+<%= link_to 'Back', boots_path %>

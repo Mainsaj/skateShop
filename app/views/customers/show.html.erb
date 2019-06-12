@@ -1,8 +1,13 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Fist name:</strong>
-  <%= @customer.fist_name %>
+  <strong>Customer:</strong>
+  <%= @customer.customer_id %>
+</p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @customer.first_name %>
 </p>
 
 <p>
@@ -11,28 +16,28 @@
 </p>
 
 <p>
-  <strong>Boot:</strong>
-  <%= @customer.boot %>
+  <strong>Phone:</strong>
+  <%= @customer.phone %>
 </p>
 
 <p>
-  <strong>Boot cost:</strong>
-  <%= @customer.boot_cost %>
+  <strong>Address:</strong>
+  <%= @customer.address %>
 </p>
 
 <p>
-  <strong>Blade:</strong>
-  <%= @customer.blade %>
+  <strong>City:</strong>
+  <%= @customer.city %>
 </p>
 
 <p>
-  <strong>Blade cost:</strong>
-  <%= @customer.blade_cost %>
+  <strong>State:</strong>
+  <%= @customer.state %>
 </p>
 
 <p>
-  <strong>Total cost:</strong>
-  <%= @customer.total_cost %>
+  <strong>Zip:</strong>
+  <%= @customer.zip %>
 </p>
 
 <%= link_to 'Edit', edit_customer_path(@customer) %> |

@@ -1,4 +1,21 @@
 Rails.application.routes.draw do
+  resources :promotions
+  resources :products
+  resources :sales
+  get 'report/custlist'
+
+  get 'report/bootlist'
+
+  get 'report/bladelist'
+    
+    get 'report/salelist'
+    
+    get 'report/productlist'
+    
+    get 'home/promotions'
+
+  resources :blades
+  resources :boots
   resources :customers
   get 'home/index'
 
@@ -9,6 +26,11 @@ Rails.application.routes.draw do
     get 'home/help'
     
     get 'home/privacy'
+    
+    get 'home/reports'
+    
+    get 'home/search'
+    post 'home/search'
     
     root 'home#index'
 

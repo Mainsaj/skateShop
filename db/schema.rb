@@ -10,16 +10,62 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190612033427) do
+ActiveRecord::Schema.define(version: 20190612200008) do
+
+  create_table "blades", force: :cascade do |t|
+    t.string "brand"
+    t.string "model"
+    t.string "cost"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "boots", force: :cascade do |t|
+    t.string "brand"
+    t.string "model"
+    t.string "cost"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "customers", force: :cascade do |t|
-    t.string "fist_name"
+    t.integer "customer_id"
+    t.string "first_name"
+    t.string "last_name"
+    t.string "phone"
+    t.string "address"
+    t.string "city"
+    t.string "state"
+    t.string "zip"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "products", force: :cascade do |t|
+    t.string "brand"
+    t.string "model"
+    t.string "cost"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "promotions", force: :cascade do |t|
+    t.string "title"
+    t.string "description"
+    t.string "imagePath"
+    t.date "startDate"
+    t.date "endDate"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "sales", force: :cascade do |t|
+    t.integer "customer_id"
+    t.string "first_name"
     t.string "last_name"
     t.string "boot"
-    t.decimal "boot_cost"
     t.string "blade"
-    t.decimal "blade_cost"
-    t.decimal "total_cost"
+    t.string "cost"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

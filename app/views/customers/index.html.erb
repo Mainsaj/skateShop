@@ -5,13 +5,14 @@
 <table>
   <thead>
     <tr>
-      <th>Fist name</th>
+      <th>Customer</th>
+      <th>First name</th>
       <th>Last name</th>
-      <th>Boot</th>
-      <th>Boot cost</th>
-      <th>Blade</th>
-      <th>Blade cost</th>
-      <th>Total cost</th>
+      <th>Phone</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Zip</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -19,13 +20,14 @@
   <tbody>
     <% @customers.each do |customer| %>
       <tr>
-        <td><%= customer.fist_name %></td>
+        <td><%= customer.customer_id %></td>
+        <td><%= customer.first_name %></td>
         <td><%= customer.last_name %></td>
-        <td><%= customer.boot %></td>
-        <td><%= customer.boot_cost %></td>
-        <td><%= customer.blade %></td>
-        <td><%= customer.blade_cost %></td>
-        <td><%= customer.total_cost %></td>
+        <td><%= customer.phone %></td>
+        <td><%= customer.address %></td>
+        <td><%= customer.city %></td>
+        <td><%= customer.state %></td>
+        <td><%= customer.zip %></td>
         <td><%= link_to 'Show', customer %></td>
         <td><%= link_to 'Edit', edit_customer_path(customer) %></td>
         <td><%= link_to 'Destroy', customer, method: :delete, data: { confirm: 'Are you sure?' } %></td>

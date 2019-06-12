@@ -1,0 +1,22 @@
+<h1>My Sales!</h1>
+<table>  
+<tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Boot</th>
+    <th>Blade</th>
+    <th>Cost</th>
+</tr>
+
+<% @salelist .each do |s| %>
+
+<tr>
+    <td><%= s.first_name %></td>
+    <td><%= s.last_name %></td>
+    <td><%= s.boot %></td>
+    <td><%= s.blade %></td>
+    <td><%= s.cost %></td>
+</tr>
+<% end %>
+
+</table>

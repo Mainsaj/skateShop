@@ -1,0 +1,32 @@
+<%= form_with(model: boot, local: true) do |form| %>
+  <% if boot.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(boot.errors.count, "error") %> prohibited this boot from being saved:</h2>
+
+      <ul>
+      <% boot.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :brand %>
+    <%= form.text_field :brand, id: :boot_brand %>
+  </div>
+
+  <div class="field">
+    <%= form.label :model %>
+    <%= form.text_field :model, id: :boot_model %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cost %>
+    <%= form.text_field :cost, id: :boot_cost %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

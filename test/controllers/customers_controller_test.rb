@@ -17,7 +17,7 @@ class CustomersControllerTest < ActionDispatch::IntegrationTest
 
   test "should create customer" do
     assert_difference('Customer.count') do
-      post customers_url, params: { customer: { blade: @customer.blade, blade_cost: @customer.blade_cost, boot: @customer.boot, boot_cost: @customer.boot_cost, fist_name: @customer.fist_name, last_name: @customer.last_name, total_cost: @customer.total_cost } }
+      post customers_url, params: { customer: { address: @customer.address, city: @customer.city, customer_id: @customer.customer_id, first_name: @customer.first_name, last_name: @customer.last_name, phone: @customer.phone, state: @customer.state, zip: @customer.zip } }
     end
 
     assert_redirected_to customer_url(Customer.last)
@@ -34,7 +34,7 @@ class CustomersControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update customer" do
-    patch customer_url(@customer), params: { customer: { blade: @customer.blade, blade_cost: @customer.blade_cost, boot: @customer.boot, boot_cost: @customer.boot_cost, fist_name: @customer.fist_name, last_name: @customer.last_name, total_cost: @customer.total_cost } }
+    patch customer_url(@customer), params: { customer: { address: @customer.address, city: @customer.city, customer_id: @customer.customer_id, first_name: @customer.first_name, last_name: @customer.last_name, phone: @customer.phone, state: @customer.state, zip: @customer.zip } }
     assert_redirected_to customer_url(@customer)
   end
 

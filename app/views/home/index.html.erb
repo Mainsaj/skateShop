@@ -1,2 +1,11 @@
 <h1>Home</h1>
 
+<div class="promotions">
+    <% @ads.each do |ad| %>
+    <div class="promo">
+        <h6><%= ad.title %><br/></h6>
+        <picture><%= image_tag ad.imagePath, size:"500x200" %> </picture>
+    </div>
+    <h6><%= ad.description %></h6>
+    <% end %> 
+</div>

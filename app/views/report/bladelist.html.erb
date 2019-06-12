@@ -1,0 +1,18 @@
+<h1>My Blades!</h1>
+<table>  
+<tr>
+    <th>Brand</th>
+    <th>Model</th>
+    <th>Cost</th>
+</tr>
+
+<% @bladelist .each do |s| %>
+
+<tr>
+    <td><%= s.brand %></td>
+    <td><%= s.model %></td>
+    <td><%= s.cost %></td>
+</tr>
+<% end %>
+
+</table>

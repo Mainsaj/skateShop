@@ -1,19 +1,21 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  fist_name: MyString
+  customer_id: 1
+  first_name: MyString
   last_name: MyString
-  boot: MyString
-  boot_cost: 9.99
-  blade: MyString
-  blade_cost: 9.99
-  total_cost: 9.99
+  phone: MyString
+  address: MyString
+  city: MyString
+  state: MyString
+  zip: MyString
 
 two:
-  fist_name: MyString
+  customer_id: 1
+  first_name: MyString
   last_name: MyString
-  boot: MyString
-  boot_cost: 9.99
-  blade: MyString
-  blade_cost: 9.99
-  total_cost: 9.99
+  phone: MyString
+  address: MyString
+  city: MyString
+  state: MyString
+  zip: MyString

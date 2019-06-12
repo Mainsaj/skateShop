@@ -1,0 +1,29 @@
+<h1>Search</h1>
+
+<%= form_tag :action => 'search' do %>
+	<p>What brand are you looking for? 
+	<%= text_field_tag 'searchinput', @searchinput %> </p>
+	<hr/>
+	<% if @results>0 %>
+		<% if @productlist.length >0 %>
+			<p> Here are the search results:</p>
+			<table> 
+			     <tr>
+				<th>Brand</th>
+				<th>Model</th>
+			     </tr>
+			<% @productlist.each do |p| %>
+			        <tr>
+				<td><%= p.brand%></td>
+				<td><%= link_to p.model, product_path(p.id) %></td>
+			        </tr>
+			<% end %>
+			</table>
+
+		<% else%>
+			<p>There were no product with your search criteria. Try again!</p>
+		<% end %>
+	<% end %>
+
+	<%= submit_tag 'Search' %>
+<% end %>
