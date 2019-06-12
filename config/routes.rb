@@ -1,9 +1,14 @@
 Rails.application.routes.draw do
+  resources :customers
   get 'home/index'
 
   get 'home/about'
 
   get 'home/contact'
+    
+    get 'home/help'
+    
+    get 'home/privacy'
     
     root 'home#index'
 

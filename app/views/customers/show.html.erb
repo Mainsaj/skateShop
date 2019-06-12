@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Fist name:</strong>
+  <%= @customer.fist_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @customer.last_name %>
+</p>
+
+<p>
+  <strong>Boot:</strong>
+  <%= @customer.boot %>
+</p>
+
+<p>
+  <strong>Boot cost:</strong>
+  <%= @customer.boot_cost %>
+</p>
+
+<p>
+  <strong>Blade:</strong>
+  <%= @customer.blade %>
+</p>
+
+<p>
+  <strong>Blade cost:</strong>
+  <%= @customer.blade_cost %>
+</p>
+
+<p>
+  <strong>Total cost:</strong>
+  <%= @customer.total_cost %>
+</p>
+
+<%= link_to 'Edit', edit_customer_path(@customer) %> |
+<%= link_to 'Back', customers_path %>

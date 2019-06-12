@@ -1,0 +1,52 @@
+<%= form_with(model: customer, local: true) do |form| %>
+  <% if customer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(customer.errors.count, "error") %> prohibited this customer from being saved:</h2>
+
+      <ul>
+      <% customer.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :fist_name %>
+    <%= form.text_field :fist_name, id: :customer_fist_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :last_name %>
+    <%= form.text_field :last_name, id: :customer_last_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :boot %>
+    <%= form.text_field :boot, id: :customer_boot %>
+  </div>
+
+  <div class="field">
+    <%= form.label :boot_cost %>
+    <%= form.text_field :boot_cost, id: :customer_boot_cost %>
+  </div>
+
+  <div class="field">
+    <%= form.label :blade %>
+    <%= form.text_field :blade, id: :customer_blade %>
+  </div>
+
+  <div class="field">
+    <%= form.label :blade_cost %>
+    <%= form.text_field :blade_cost, id: :customer_blade_cost %>
+  </div>
+
+  <div class="field">
+    <%= form.label :total_cost %>
+    <%= form.text_field :total_cost, id: :customer_total_cost %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
