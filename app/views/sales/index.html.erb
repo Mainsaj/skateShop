@@ -6,10 +6,7 @@
   <thead>
     <tr>
       <th>Customer</th>
-      <th>First name</th>
-      <th>Last name</th>
-      <th>Boot</th>
-      <th>Blade</th>
+      <th>Products</th>
       <th>Cost</th>
       <th colspan="3"></th>
     </tr>
@@ -19,10 +16,7 @@
     <% @sales.each do |sale| %>
       <tr>
         <td><%= sale.customer_id %></td>
-        <td><%= sale.first_name %></td>
-        <td><%= sale.last_name %></td>
         <td><%= sale.boot %></td>
-        <td><%= sale.blade %></td>
         <td><%= sale.cost %></td>
         <td><%= link_to 'Show', sale %></td>
         <td><%= link_to 'Edit', edit_sale_path(sale) %></td>

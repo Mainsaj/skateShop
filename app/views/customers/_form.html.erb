@@ -16,6 +16,19 @@
     <%= form.number_field :customer_id, id: :customer_customer_id %>
   </div>
 
+<div class="field">
+    Username: <br/> <%= form.text_field :username, :size=>"10" %> 
+</div>
+
+<div class="field">
+    Password: <br/> <%= form.password_field :password, :size=>"15" %>
+</div>
+
+<div class="field">
+	Password Confirmation: <br/> <%= form.password_field :password_confirmation, :size=>"15" %>
+</div>
+
+
   <div class="field">
     <%= form.label :first_name %>
     <%= form.text_field :first_name, id: :customer_first_name %>

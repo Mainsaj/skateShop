@@ -64,14 +64,12 @@ header {
 }
 
 figure {
-    width:10%;
+    width:100%;
 }
 
 header>h1 {
-    width:70%;
-    font-size:4em;
-    margin-left:-1em;
-    margin-right:1em;
+    width:100%;
+    font-size:3em;
 }
 
 h1 {
@@ -82,6 +80,7 @@ h1 {
 h2 {
     width:10%;
     font-size:1em;
+    margin:1em;
     }
 
 h4 {
@@ -107,6 +106,31 @@ h6 {
     margin-bottom: -0.5em;
 }
 
+header>h6 {
+    margin-top:-1em;
+}
+
 .promo {
     width:100%;
+}
+
+table {
+    border: 0.1em solid black;
+}
+
+th {
+     border: 0.1em solid black;
+}
+
+td {
+     border: 0.1em solid black;
+}
+
+.prod {
+    display:flex;
+    flex-flow: row wrap;
+}
+
+.prod>product {
+    width:25%
 }

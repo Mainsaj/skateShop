@@ -40,5 +40,32 @@
   <%= @customer.zip %>
 </p>
 
+<hr>
+Here are the past sale transactions of this customer:
+<table>
+  <thead>
+    <tr>
+     <th>Sale ID</th>
+      <th>Boot</th>
+        <th>Blade</th>
+        <th>Price</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @custsale.each do |c| %>
+      <tr>
+        <td><%= c.id %></td>
+          <td><%= c.boot %></td>
+          <td><%= c.blade %></td>
+          <td><%= c.cost %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+
 <%= link_to 'Edit', edit_customer_path(@customer) %> |
 <%= link_to 'Back', customers_path %>
